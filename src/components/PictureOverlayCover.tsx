@@ -1,4 +1,5 @@
 import React from 'react';
+import defaultImage from '../assets/defaultImage.png';
 
 type Props = {
     image: string
@@ -6,9 +7,9 @@ type Props = {
 const PictureOverlayCover: React.FC<Props> = ({image}) => {
   return (
     <div className="background-div">
-      {image !== '' &&<div className="overlay">
-         <img src={image} alt="Overlay Image" className="overlay-image" />
-      </div>}
+      <div className="overlay">
+         <img src={image !== '' ? image : defaultImage} alt="Overlay Image" className="overlay-image" />
+      </div>
     </div>
   );
 };
