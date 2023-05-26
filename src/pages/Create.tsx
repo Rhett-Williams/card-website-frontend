@@ -28,15 +28,14 @@ const Create: React.FC = () => {
     }
 
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', width: '70%', flexDirection: 'column', alignItems: 'center', margin: '0 auto', marginTop: '100px'}}>
-            <div style={{display: 'flex', width: '30%', justifyContent: 'space-between', marginBottom: '20px'}}>
+        <div style={{ display: 'flex', justifyContent: 'center', width: '70%', flexDirection: 'column', alignItems: 'center', margin: '0 auto'}}>
+            <div style={{display: 'flex', width: '30%', minWidth: '400px', justifyContent: 'space-between', marginBottom: '20px', marginTop: '30px'}}>
                 <div className={currentStage === 'Cover' ? 'create-button-selected' : 'create-button'} onClick={() => setCurrentStage('Cover')} >Cover</div>
                 <div className={currentStage === 'Inner' ? 'create-button-selected' : 'create-button'}  onClick={() => setCurrentStage('Inner')} >Inner</div>
                 <div className={currentStage === 'Address' ? 'create-button-selected' : 'create-button'}  onClick={() => setCurrentStage('Address')} >Address</div>
             </div>
             {renderStage()}
-            <h1>Create Page!</h1>
-            <p>This is a basic React hCreate.</p>
+            <button className="generate-button" style={{width: '70%', marginTop: '50px', marginBottom: '50px'}} onClick={onGenerate}>Purcahse your card!</button>
         </div>
     );
 };

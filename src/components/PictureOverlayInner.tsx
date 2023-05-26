@@ -10,8 +10,8 @@ const PictureOverlayInner = ({image, text, onChange}: Props) => {
   return (
     <div className="picture-overlay-inner">
       <div className="inner-container">
-        <img src={image} alt="Overlay Image" className="inner-image" />
-        <textarea className="inner-text-input" value={text} onChange={(e) => onChange(e.target.value)}/>
+      {image !== '' ? <img src={image} alt="Overlay Image" className="inner-image" /> : <div className='inner-image'/>}
+        <textarea placeholder='Write a poem or message here or generate one based on the filters below. Or click surprise me for a completely random poem.' className="inner-text-input" value={text} onChange={(e) => onChange(e.target.value)}/>
       </div>
     </div>
   );
