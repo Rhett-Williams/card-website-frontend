@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Address: React.FC = () => {
-  return (
-    <div>
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is a basic React homepage.</p>
-    </div>
-  );
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+      setIsVisible(true);
+      return () => {
+        setIsVisible(false);
+      };
+    }, []);
+  
+    return (
+      <div
+        className={`fade-in-right ${isVisible ? 'visible' : 'hidden'}`}
+        onAnimationEnd={() => setIsVisible(false)}
+      >
+        <h1>asd adasd asd asd !</h1>
+        <p>This is a basiasdasd asdaact homepage.</p>
+      </div>
+    );
 };
 
 export default Address;

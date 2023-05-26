@@ -63,3 +63,145 @@
     margin-bottom: 10px;
   }
 }
+
+.create-button-selected {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: orange;
+  transition: color 1s;
+  cursor: pointer;
+}
+
+.create-button {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: grey;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.create-button:hover {
+  color: orange;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right.hidden {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.background-div {
+  width: 300px;
+  height: 470px;
+  padding: 15px 0px 0px 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 285px;
+  height: 350px;
+  object-fit:none;
+}
+
+.cover-form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-form-prompt {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cover-form-prompt span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.cover-form-prompt button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cover-form-prompt button:hover {
+  background-color: orange;
+}
+
+.text-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.generate-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.generate-button:hover {
+  background-color: orange;
+}
+
+.picture-overlay-inner {
+  width: 700px;
+  height: 500px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+}
+
+.inner-image {
+  width: 50%;
+  height: auto;
+}
+
+.inner-text-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-left: 10px;
+  height: 350px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
